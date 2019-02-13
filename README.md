@@ -8,17 +8,17 @@ Compare spreadsheet documents of the same name in different folders of the same 
 
 ### Purpose
 
-Checking different versions of a spreadsheet document for even a slight change in content is an arduous task and with thousands of files, it would take an immense amount of time to do it manually. This project aims to shorten the time taken and remove most of the manual work required. It was originally targeted to be used for CSV files which contain column headers and a unique identifier for each row entry but can be expanded to handle other general documents such as normal spreadsheet tables and text files which have been formatted to have a unique identifier of entries in the first column.
+Checking different versions of a spreadsheet document for even a slight change in content is an arduous task and with thousands of files, it would take an immense amount of time to do it manually. This project aims to shorten the time taken and remove most of the manual work required. It was originally targeted to be used for specific CSV files which contain column headers and a unique identifier for each row entry but can be expanded to handle other general documents such as normal spreadsheet tables and text files which have been formatted to have a unique identifier of entries in the first column.
 
 This project will do the following:
 - Generating a simple hash (MD5) for each versions of the file to compare and store the file names in a text file.
 - Using this list of files, the Excel macro will then do the detailed comparison and outputs the result in a document of the same name which will be saved in another folder.
 - The resulting documents will contain the difference between the files that were compared, with additional formatting to highlight any changes the macro detected.
-- An error log is generated for the user to review any errors that arise during the comparison.
+- An error log is generated for the user to review any errors that may arise during the comparison.
 
 ## Usage
 
-Put the files to be checked into both 'old' and 'new' folders. (Test files have been provided)
+Put the files to be checked into both 'old' and 'new' folders. (Test files can be found by extracting example_files.rar)
 If required, the directory of files to be checked can be changed by changing the path in `os.listdir('new/')` and `os.listdir('old/')`.
 
 To generate the list of changed files, run the Python script. A fileList text file will be generated that contains the list of files that have changed.
